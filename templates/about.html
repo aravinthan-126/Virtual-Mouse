@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | Virtual Mouse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    nav h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #00f2fe;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: #1e2a38;
+      border-radius: 20px;
+      padding: 60px 50px;
+      max-width: 800px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1s ease-out;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #00f2fe;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Virtual Mouse</h1>
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="{{ url_for('help') }}">Help</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h2>About the Project</h2>
+      <p>
+        The <strong>Virtual Mouse</strong> is an innovative web-based application that allows users to control mouse functions using hand gestures and a webcam. Developed using Python, OpenCV, MediaPipe, and Flask, the project uses real-time hand tracking to interpret finger positions as mouse movements and clicks.
+      </p>
+      <br />
+      <p>
+        This project is designed to provide an alternative method of interaction, enhancing accessibility and showcasing the power of computer vision. Whether it's for hands-free navigation or as a proof of concept for gesture-controlled interfaces, the Virtual Mouse demonstrates how modern technologies can reshape user interaction.
+      </p>
+      <br />
+
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Virtual Mouse Project | Made by Aravinthan
+  </footer>
+</body>
+</html>
